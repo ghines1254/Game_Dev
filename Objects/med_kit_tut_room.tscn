@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bocrg7qy4k1y4"]
+
+[ext_resource type="PackedScene" uid="uid://dktjnsf7khquj" path="res://Objects/collectable.tscn" id="1_vpnvs"]
+[ext_resource type="Texture2D" uid="uid://dcse3jxn0bhwg" path="res://art/MEOWT_ASSET_TUTORIAL_ROOM/MEOWT_ASSET_TUTORIAL_ROOM/MEDIC_BOX.png" id="2_mynxt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnl4e"]
+resource_local_to_scene = true
+size = Vector2(8, 7)
+
+[node name="medKit_TutRoom" instance=ExtResource("1_vpnvs")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_jnl4e")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_mynxt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
