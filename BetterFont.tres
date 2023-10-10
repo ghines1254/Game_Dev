@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bhgwwqcwynaku"]
+
+[ext_resource type="FontFile" uid="uid://cp0ulf671f1f" path="res://Objects/Pixellettersfull-BnJ5.ttf" id="1_tngwt"]
+
+[resource]
+base_font = ExtResource("1_tngwt")
