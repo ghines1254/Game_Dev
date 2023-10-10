@@ -1,0 +1,244 @@
+[gd_scene load_steps=26 format=3 uid="uid://cxcnecim1cu6v"]
+
+[ext_resource type="Theme" uid="uid://btx1eeiopt3c3" path="res://Menus/new_theme.tres" id="1_4pmtc"]
+[ext_resource type="Script" path="res://Menus/main_menu.gd" id="2_1b5bl"]
+[ext_resource type="FontFile" uid="uid://bnga0g703r2qh" path="res://Menus/font/Early GameBoy.ttf" id="2_irdol"]
+[ext_resource type="Texture2D" uid="uid://dybpbf42ebb1d" path="res://Menus/title_sequence/Main_Menu_0000.bmp" id="3_hhpoh"]
+[ext_resource type="Texture2D" uid="uid://jssg7ssg3e3g" path="res://Menus/title_sequence/Main_Menu_0001.bmp" id="4_uj8hs"]
+[ext_resource type="Texture2D" uid="uid://bbvk7wkcko071" path="res://Menus/title_sequence/Main_Menu_0010.bmp" id="5_4nj7u"]
+[ext_resource type="Texture2D" uid="uid://d3wi8xt164lk0" path="res://Menus/title_sequence/Main_Menu_0011.bmp" id="6_bh25d"]
+[ext_resource type="Texture2D" uid="uid://bup6ixot1b8cc" path="res://Menus/title_sequence/Main_Menu_0012.bmp" id="7_woy40"]
+[ext_resource type="Texture2D" uid="uid://lavho03xrvlw" path="res://Menus/title_sequence/Main_Menu_0013.bmp" id="8_370rk"]
+[ext_resource type="Texture2D" uid="uid://15v5cslgh84" path="res://Menus/title_sequence/Main_Menu_0014.bmp" id="9_fdrrw"]
+[ext_resource type="Texture2D" uid="uid://bxcqjyo62ton1" path="res://Menus/title_sequence/Main_Menu_0002.bmp" id="10_yq57f"]
+[ext_resource type="Texture2D" uid="uid://c37k66wx0qx7" path="res://Menus/title_sequence/Main_Menu_0003.bmp" id="11_nlqim"]
+[ext_resource type="Texture2D" uid="uid://b7gdb36ueci5k" path="res://Menus/title_sequence/Main_Menu_0004.bmp" id="12_ibbqe"]
+[ext_resource type="Texture2D" uid="uid://bgsib2oe5qpw0" path="res://Menus/title_sequence/Main_Menu_0005.bmp" id="13_gipcv"]
+[ext_resource type="Texture2D" uid="uid://d00v60hxwetbm" path="res://Menus/title_sequence/Main_Menu_0006.bmp" id="14_a41r3"]
+[ext_resource type="Texture2D" uid="uid://femjxpoxtgua" path="res://Menus/title_sequence/Main_Menu_0007.bmp" id="15_1mpuu"]
+[ext_resource type="Texture2D" uid="uid://0rwswsrch4kn" path="res://Menus/title_sequence/Main_Menu_0008.bmp" id="16_dwpnd"]
+[ext_resource type="Texture2D" uid="uid://1vroew6suuqm" path="res://Menus/title_sequence/Main_Menu_0009.bmp" id="17_hs2y5"]
+[ext_resource type="AudioStream" uid="uid://dcd7hkqwjhyrb" path="res://Menus/title.ogg" id="19_47mfl"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_y0xjw"]
+frames = 15
+speed_scale = 3.0
+frame_0/texture = ExtResource("3_hhpoh")
+frame_1/texture = ExtResource("4_uj8hs")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("10_yq57f")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("11_nlqim")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("12_ibbqe")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("13_gipcv")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("14_a41r3")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("15_1mpuu")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("16_dwpnd")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("17_hs2y5")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("5_4nj7u")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("6_bh25d")
+frame_11/duration = 1.0
+frame_12/texture = ExtResource("7_woy40")
+frame_12/duration = 1.0
+frame_13/texture = ExtResource("8_370rk")
+frame_13/duration = 1.0
+frame_14/texture = ExtResource("9_fdrrw")
+frame_14/duration = 1.0
+
+[sub_resource type="Animation" id="Animation_mssma"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_hlqga"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0a2x7"]
+_data = {
+"fade_in": SubResource("Animation_mssma"),
+"fade_out": SubResource("Animation_hlqga")
+}
+
+[sub_resource type="Animation" id="Animation_j54l2"]
+resource_name = "sound_fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title_Song:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-24.762, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_12fhl"]
+_data = {
+"sound_fade_out": SubResource("Animation_j54l2")
+}
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4pmtc")
+script = ExtResource("2_1b5bl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AnimatedTexture_y0xjw")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(1, 0.498039, 0.741176, 1)
+theme_override_font_sizes/font_size = 24
+text = "Let Meowt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../End")
+theme_override_fonts/font = ExtResource("2_irdol")
+theme_override_font_sizes/font_size = 8
+text = "Start"
+
+[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 8
+text = "Continue"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 8
+text = "Options"
+
+[node name="End" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../Start")
+theme_override_font_sizes/font_size = 8
+text = "End"
+
+[node name="Title_Song" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_47mfl")
+volume_db = -24.762
+autoplay = true
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0a2x7")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Song_Fade" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_12fhl")
+}
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/End" to="." method="_on_end_pressed"]
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

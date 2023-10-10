@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://btx1eeiopt3c3"]
+
+[ext_resource type="FontFile" uid="uid://bnga0g703r2qh" path="res://Menus/font/Early GameBoy.ttf" id="1_so1pe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3117"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ht57m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1v667"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q8hqo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxsgy"]
+
+[resource]
+default_font = ExtResource("1_so1pe")
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(0.572549, 0.94902, 0.94902, 1)
+Button/colors/font_hover_color = Color(0.560784, 0.984314, 1, 1)
+Button/colors/font_hover_pressed_color = Color(0.176471, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.0588235, 1, 1, 1)
+Button/colors/icon_focus_color = Color(0.317647, 1, 1, 1)
+Button/colors/icon_hover_color = Color(0.278431, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(0.305882, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(0.294118, 1, 1, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_g3117")
+Button/styles/focus = SubResource("StyleBoxEmpty_ht57m")
+Button/styles/hover = SubResource("StyleBoxEmpty_1v667")
+Button/styles/normal = SubResource("StyleBoxEmpty_q8hqo")
+Button/styles/pressed = SubResource("StyleBoxEmpty_vxsgy")
