@@ -1,15 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://cx5ci8eoe3bgg"]
+[gd_scene load_steps=3 format=3 uid="uid://cx5ci8eoe3bgg"]
 
-[ext_resource type="Texture2D" uid="uid://d3yumyrvtx3vs" path="res://Objects/inventorySlot (1).png" id="1_ddgfq"]
+[ext_resource type="Script" path="res://Objects/inventorySlotsGui.gd" id="1_4l4me"]
+[ext_resource type="Texture2D" uid="uid://d3yumyrvtx3vs" path="res://Objects/inventorySlot (1).png" id="1_ylena"]
 
 [node name="slot" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(20, 20)
 offset_right = 20.0
 offset_bottom = 20.0
+script = ExtResource("1_4l4me")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.941176, 0.238806)
-texture = ExtResource("1_ddgfq")
+[node name="background inventory" type="Sprite2D" parent="."]
+texture = ExtResource("1_ylena")
 centered = false
 vframes = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="items" type="Sprite2D" parent="CenterContainer/Panel"]

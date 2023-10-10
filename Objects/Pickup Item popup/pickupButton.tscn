@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://df7pir21gcgpg"]
+
+[ext_resource type="Script" path="res://Objects/Pickup Item popup/ItemPickupPopup.gd" id="1_eeiji"]
+[ext_resource type="Texture2D" uid="uid://d0jhpt3tkhwqh" path="res://Objects/Pickup Item popup/question.png" id="2_i6ynx"]
+[ext_resource type="Texture2D" uid="uid://cbui6oktq0lqe" path="res://Objects/Pickup Item popup/Pick_up_Yes.png" id="3_5cesl"]
+[ext_resource type="Texture2D" uid="uid://dgmwusx03raih" path="res://Objects/Pickup Item popup/Pick_up_No.png" id="4_omq6d"]
+
+[node name="Control" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -220.0
+offset_bottom = -122.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eeiji")
+
+[node name="Question" type="Sprite2D" parent="."]
+position = Vector2(9, 2.89841)
+scale = Vector2(0.0246305, 0.0217655)
+texture = ExtResource("2_i6ynx")
+
+[node name="Yes" type="Sprite2D" parent="."]
+position = Vector2(3.91406, 8.96875)
+scale = Vector2(0.0246938, 0.0195312)
+texture = ExtResource("3_5cesl")
+
+[node name="Button" type="Button" parent="Yes"]
+offset_left = -199.0
+offset_top = -152.0
+offset_right = 165.0
+offset_bottom = 117.0
+flat = true
+
+[node name="No" type="Sprite2D" parent="."]
+position = Vector2(13.7578, 9)
+scale = Vector2(0.0261456, 0.0194204)
+texture = ExtResource("4_omq6d")
+
+[node name="Button" type="Button" parent="No"]
+offset_left = -144.0
+offset_top = -154.0
+offset_right = 200.0
+offset_bottom = 103.0
+flat = true
+
+[connection signal="pressed" from="Yes/Button" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="No/Button" to="." method="_on_Button2_pressed"]
