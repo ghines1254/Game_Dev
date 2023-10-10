@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://bqpen3ufvykjh"]
+
+[ext_resource type="Script" path="res://Objects/InventoryItem.gd" id="1_2coeb"]
+[ext_resource type="Texture2D" uid="uid://dcse3jxn0bhwg" path="res://art/MEOWT_ASSET_TUTORIAL_ROOM/MEOWT_ASSET_TUTORIAL_ROOM/MEDIC_BOX.png" id="2_yrnk2"]
+
+[resource]
+script = ExtResource("1_2coeb")
+name = "medKit"
+texture = ExtResource("2_yrnk2")
