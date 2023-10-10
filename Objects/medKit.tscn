@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lcba5"]
 resource_local_to_scene = true
 
-[node name="MedKit" instance=ExtResource("1_edl32")]
+[node name="Med Kit" instance=ExtResource("1_edl32")]
 itemTres = ExtResource("2_xf837")
 
 [node name="CollisionShape2D" parent="." index="0"]

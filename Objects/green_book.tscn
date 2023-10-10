@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7srgnmiwvpfp"]
+
+[ext_resource type="PackedScene" uid="uid://dktjnsf7khquj" path="res://Objects/collectable.tscn" id="1_8wa07"]
+[ext_resource type="Texture2D" uid="uid://c1xcu8yv6p2pj" path="res://art/MEOWT_ASSET_TUTORIAL_ROOM/MEOWT_ASSET_TUTORIAL_ROOM/GREEN_BOOK.png" id="2_fqtco"]
+[ext_resource type="Resource" uid="uid://b3f2yda8k4pcp" path="res://Objects/Green Book.tres" id="2_gpo2r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oeqeo"]
+resource_local_to_scene = true
+
+[node name="Green Book" instance=ExtResource("1_8wa07")]
+itemTres = ExtResource("2_gpo2r")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(6, 5)
+shape = SubResource("RectangleShape2D_oeqeo")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(6, 5)
+texture = ExtResource("2_fqtco")

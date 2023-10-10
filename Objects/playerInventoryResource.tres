@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="inventoryResource" load_steps=3 format=3 uid="uid://72r02mbc57rx"]
+[gd_resource type="Resource" script_class="inventoryResource" load_steps=5 format=3 uid="uid://72r02mbc57rx"]
 
 [ext_resource type="Resource" uid="uid://bqpen3ufvykjh" path="res://Objects/medKit.tres" id="1_o1mfa"]
+[ext_resource type="Resource" uid="uid://bauaomegldkgr" path="res://Objects/Red_Book.tres" id="2_ii511"]
 [ext_resource type="Script" path="res://Objects/inventoryResource.gd" id="2_w33mn"]
+[ext_resource type="Resource" uid="uid://b3f2yda8k4pcp" path="res://Objects/Green Book.tres" id="3_ve0se"]
 
 [resource]
 script = ExtResource("2_w33mn")
-items = Array[Resource("res://Objects/InventoryItem.gd")]([ExtResource("1_o1mfa"), ExtResource("1_o1mfa"), null, ExtResource("1_o1mfa")])
+items = Array[Resource("res://Objects/InventoryItem.gd")]([ExtResource("1_o1mfa"), ExtResource("2_ii511"), ExtResource("3_ve0se")])

@@ -23,3 +23,8 @@ func close():
 	visible = false
 	isOpen = false
 	closed.emit()
+	
+
+
+func _on_quit_pressed():
+	get_tree().quit()

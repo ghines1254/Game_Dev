@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://bauaomegldkgr"]
+
+[ext_resource type="Script" path="res://Objects/InventoryItem.gd" id="1_iae81"]
+[ext_resource type="Texture2D" uid="uid://c67oayhfhok4b" path="res://art/MEOWT_ASSET_TUTORIAL_ROOM/MEOWT_ASSET_TUTORIAL_ROOM/RED_BOOK.png" id="2_0a50l"]
+
+[resource]
+script = ExtResource("1_iae81")
+name = "Red Book"
+texture = ExtResource("2_0a50l")

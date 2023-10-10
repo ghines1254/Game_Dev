@@ -31,6 +31,10 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg")
 
+[gui]
+
+theme/custom_font="res://BetterFont.tres"
+
 [input]
 
 ui_left={

@@ -13,12 +13,9 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	if body.name == "Mochi":
 		inBounds = false
-		
-func collect(inventory:inventoryResource):
-	inventory.insert(itemTres)
-	queue_free()
+
 	
 func _input(event):
 	if event.is_action_pressed("pickupItem") and inBounds:
-		collect(resourceInventory)
-		print("Item picked up")
+		queue_free()
+		print(itemTres.name)
