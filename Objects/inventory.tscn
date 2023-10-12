@@ -1,0 +1,150 @@
+[gd_scene load_steps=5 format=3 uid="uid://1ap3ie6njb7i"]
+
+[ext_resource type="Script" path="res://Objects/inventory.gd" id="1_i15gy"]
+[ext_resource type="PackedScene" uid="uid://cx5ci8eoe3bgg" path="res://Objects/slot.tscn" id="2_lajpq"]
+[ext_resource type="Texture2D" uid="uid://blm5ni5e65vgw" path="res://Objects/inventoryRectLM.png" id="2_q7atn"]
+[ext_resource type="Texture2D" uid="uid://qnq0tatpt0bo" path="res://Objects/menu.png" id="4_sum77"]
+
+[node name="inventoryGui" type="Control"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i15gy")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 129.0
+offset_bottom = 79.0
+texture = ExtResource("2_q7atn")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+offset_right = 128.0
+offset_bottom = 72.0
+
+[node name="Slot 1" parent="NinePatchRect/GridContainer" instance=ExtResource("2_lajpq")]
+custom_minimum_size = Vector2(128, 12)
+layout_mode = 2
+
+[node name="Slot 2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_lajpq")]
+custom_minimum_size = Vector2(128, 12)
+layout_mode = 2
+
+[node name="Slot 3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_lajpq")]
+custom_minimum_size = Vector2(128, 12)
+layout_mode = 2
+
+[node name="Slot 4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_lajpq")]
+custom_minimum_size = Vector2(128, 12)
+layout_mode = 2
+
+[node name="Slot 5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_lajpq")]
+custom_minimum_size = Vector2(128, 12)
+layout_mode = 2
+
+[node name="Menu" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -53.0
+offset_top = -7.0
+offset_bottom = 82.0
+texture = ExtResource("4_sum77")
+
+[node name="Inventory Label" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 53.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 9
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inventory Button" type="Button" parent="Menu/Inventory Label"]
+modulate = Color(1, 1, 1, 0.0784314)
+layout_mode = 0
+offset_top = -1.0
+offset_right = 36.0
+offset_bottom = 14.0
+
+[node name="Objective Label" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 21.0
+offset_right = 53.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 9
+text = "Objectives"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Objective Button" type="Button" parent="Menu/Objective Label"]
+modulate = Color(1, 1, 1, 0.0784314)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 35.0
+offset_bottom = 12.0
+
+[node name="Main Menu Label" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 35.0
+offset_right = 53.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 9
+text = " Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu Button" type="Button" parent="Menu/Main Menu Label"]
+modulate = Color(1, 1, 1, 0.0784314)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 38.0
+offset_bottom = 10.0
+
+[node name="Save Label" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 44.0
+offset_right = 53.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 9
+text = "Save"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Save" type="Button" parent="Menu/Save Label"]
+modulate = Color(1, 1, 1, 0.0784314)
+layout_mode = 0
+offset_top = 3.0
+offset_right = 36.0
+offset_bottom = 12.0
+
+[node name="Quit Label" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 57.0
+offset_right = 53.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 9
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="Menu/Quit Label"]
+modulate = Color(1, 1, 1, 0.0784314)
+layout_mode = 0
+offset_top = 2.0
+offset_right = 37.0
+offset_bottom = 15.0
+
+[connection signal="pressed" from="Menu/Quit Label/Quit" to="." method="_on_quit_pressed"]
